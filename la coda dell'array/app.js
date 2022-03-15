@@ -22,6 +22,7 @@ for (let i = array.length; i > (array.length - 5); i--) {
 let array2 = [];
 //creo domanda per sapere quanti elementi deve avere l'array
 let array2Tot = Number(prompt('Quanti elementi deve avere la tua lista? (inserisci il numero)'));
+
 //targettizzo il div in html
 let stamp2 = document.getElementById('stamp2');
 let stamp3 = document.getElementById('stamp3');
@@ -29,11 +30,20 @@ let stamp3 = document.getElementById('stamp3');
 let array2Remove = Number(prompt('Quanti elementi della tua lista devo selezionare, a partire dal fondo? Inserisci numero'));
 
 
-//creo ciclo, per ogni ciclo aggiungo un elemento fino alla lunghezza massima data dal prompt
-for (let i = 1; i <= array2Tot; i++) {
+//creo ciclo, per ogni ciclo aggiungo un elemento fino alla lunghezza massima data dal prompt (aggiunta condizione se informazioni non valide)
+if (isNaN(array2Tot) == true || array2Tot == '') {
+    alert('Attenzione, informazioni non valide')
+}else {
+    for (let i = 1; i <= array2Tot; i++) {
     stamp2.innerHTML += ` ${i} `;
+    }
 }
 
-for (let i = array2Tot; i > (array2Tot - array2Remove); i--) {
+//creo ciclo, per ogni ciclo aggiungo un elemento fino alla lunghezza massima dta dal promt, poi chiedo quanti elementi selezionare dal fondo (aggiungo alert se dati sbagliati)
+if (isNaN(array2Remove) == true || array2Remove == '' || isNaN(array2Tot) == true || array2Tot == '') {
+    alert ('attenzione, informazioni non valide');
+} else {
+    for (let i = array2Tot; i > (array2Tot - array2Remove); i--) {
     stamp3.innerHTML += ` ${i} `;
+    }
 }
