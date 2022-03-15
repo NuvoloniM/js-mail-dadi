@@ -16,3 +16,16 @@ let stamp1 = document.getElementById('stamp1');
 for (let i = array.length; i > (array.length - 5); i--) {
     stamp1.innerHTML += ` ${i} `;
 }
+
+
+//creo array vuoto
+let array2 = [];
+//creo domanda per sapere quanti elementi deve avere l'array
+let array2Tot = Number(prompt('Quanti elementi deve avere la tua lista? (inserisci il numero)'));
+//targettizzo il div in html
+let stamp2 = document.getElementById('stamp2');
+
+//creo ciclo, per ogni ciclo aggiungo un elemento fino alla lunghezza massima data dal prompt
+for (let i = 1; i <= array2Tot; i++) {
+    stamp2.innerHTML += ` ${i} `;
+}
