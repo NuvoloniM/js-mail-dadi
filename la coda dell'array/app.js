@@ -24,8 +24,16 @@ let array2 = [];
 let array2Tot = Number(prompt('Quanti elementi deve avere la tua lista? (inserisci il numero)'));
 //targettizzo il div in html
 let stamp2 = document.getElementById('stamp2');
+let stamp3 = document.getElementById('stamp3');
+// chiedo quanti elementi devo estrarre dall'array a partire dal fondo 
+let array2Remove = Number(prompt('Quanti elementi della tua lista devo selezionare, a partire dal fondo? Inserisci numero'));
+
 
 //creo ciclo, per ogni ciclo aggiungo un elemento fino alla lunghezza massima data dal prompt
 for (let i = 1; i <= array2Tot; i++) {
     stamp2.innerHTML += ` ${i} `;
+}
+
+for (let i = array2Tot; i > (array2Tot - array2Remove); i--) {
+    stamp3.innerHTML += ` ${i} `;
 }
