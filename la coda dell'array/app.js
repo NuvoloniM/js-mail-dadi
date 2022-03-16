@@ -47,3 +47,53 @@ if (isNaN(array2Remove) == true || array2Remove == '' || isNaN(array2Tot) == tru
     stamp3.innerHTML += ` ${i} `;
     }
 }
+
+
+
+//creo array con elementi casuale
+let list = 
+[
+    "mele",
+    "pere",
+    "limoni",
+    "rostelle",
+    "mozzarella",
+    "sapone mani",
+    "biscotti",
+    "acqua"
+];
+
+// mi salvo su una costante l'elenco degli ultimi 5 elementi
+const last5 = [];
+let stamp4 = document.getElementById('stamp4');
+
+for (let i = list.length - 5; i < list.length; i++) {
+     last5.push(list[i]);
+}
+//stampo a video questi elementi
+stamp4.innerHTML = last5;
+
+// Creiamo un array chiedendo all'utente quanti elementi dovrà contenere e generando tanti numeri interi casuali quanti sono gli elementi da inserire.
+/*Super Extra Bonus: chiedere all'utente anche quanti elementi vanno estratti dal fondo dell'array.*/
+const list2 = [];
+let quanti = parseInt(prompt('Quanti numeri deve avere la lista? Scegli un numero maggiore o uguale a 5'))
+let quantiMeno = parseInt(prompt('Quanti elementi, a partire dal fondo, devo selezionare?'))
+if (quanti < 5) {
+    alert('Attenzione, i numeri inseriti sono troppo pochi')
+} else {
+    for (let i = 0; i < quanti; i++) {
+    let n = Math.floor(Math.random()*100 + 1);
+    list2.push(n);
+}
+
+}
+
+console.log(list2);
+
+const list3 = [];
+for (let i = list2.length - quantiMeno; i < list2.length; i++) {
+    list3.push(list2[i]);
+}
+
+console.log(list3);
+
