@@ -35,7 +35,7 @@ if (isNaN(array2Tot) == true || array2Tot == '') {
     alert('Attenzione, informazioni non valide')
 }else {
     for (let i = 1; i <= array2Tot; i++) {
-    stamp2.innerHTML += ` ${array[i]} `;
+    stamp2.innerHTML += ` ${i} `;
     }
 }
 
@@ -44,6 +44,6 @@ if (isNaN(array2Remove) == true || array2Remove == '' || isNaN(array2Tot) == tru
     alert ('attenzione, informazioni non valide');
 } else {
     for (let i = array2Tot; i > (array2Tot - array2Remove); i--) {
-    stamp3.innerHTML += ` ${array[i]} `;
+    stamp3.innerHTML += ` ${i} `;
     }
 }
