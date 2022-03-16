@@ -10,11 +10,11 @@ Attenzione #3: quali controlli dobbiamo fare sull'input dell'utente?
 Super Extra Bonus: chiedere all'utente anche quanti elementi vanno estratti dal fondo dell'array.*/
 
 //creo un array custom
-let array = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+let array = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,27,32,45];
 let stamp1 = document.getElementById('stamp1');
 //creo ciclo for al contrario da max a max -5
-for (let i = array.length; i > (array.length - 5); i--) {
-    stamp1.innerHTML += ` ${i} `;
+for (let i = array.length - 1; i >= (array.length - 5); i--) {
+    stamp1.innerHTML += ` ${array[i]} `;
 }
 
 
@@ -35,7 +35,7 @@ if (isNaN(array2Tot) == true || array2Tot == '') {
     alert('Attenzione, informazioni non valide')
 }else {
     for (let i = 1; i <= array2Tot; i++) {
-    stamp2.innerHTML += ` ${i} `;
+    stamp2.innerHTML += ` ${array[i]} `;
     }
 }
 
@@ -44,6 +44,6 @@ if (isNaN(array2Remove) == true || array2Remove == '' || isNaN(array2Tot) == tru
     alert ('attenzione, informazioni non valide');
 } else {
     for (let i = array2Tot; i > (array2Tot - array2Remove); i--) {
-    stamp3.innerHTML += ` ${i} `;
+    stamp3.innerHTML += ` ${array[i]} `;
     }
 }
